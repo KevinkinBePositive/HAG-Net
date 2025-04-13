@@ -1,0 +1,24 @@
+Model:
+    name: "HAGNet"
+    channels: 256
+    output_stride: 16
+    pretrained: True
+
+Test:
+    Dataset:
+        type: "PolypDataset"
+        root: "data\\TestDataset"
+        testsets: ['guava']
+        transform_list:
+            resize: 
+                size: [352, 352]
+            tonumpy: NULL
+            normalize: 
+                mean: [0.485, 0.456, 0.406]
+                std: [0.229, 0.224, 0.225]
+            totensor: NULL
+    Dataloader:
+        num_workers: 8
+        pin_memory: True
+    Checkpoint:
+        checkpoint_dir: "output\\HAGNet"

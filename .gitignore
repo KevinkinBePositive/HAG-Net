@@ -1,0 +1,8 @@
+data\backbone_ckpt\res2net50_v1b_26w_4s-3cf99910.pth
+data\TestDataset\test1-100
+lib\__pycache__
+lib\modules\__pycache__
+lib\optim\__pycache__
+utils\__pycache__
+output\HAGNet\guava\test.png
+output\HAGNet\latest.pth
